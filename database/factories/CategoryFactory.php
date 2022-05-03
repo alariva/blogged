@@ -1,10 +1,24 @@
 <?php
 
-use BinaryTorch\Blogged\Models\Category;
+namespace Database\Factories;
 
-$factory->define(Category::class, function (Faker\Generator $faker) {
-    return [
-        'title' => $faker->sentence,
-        'slug'  => $faker->unique()->slug(),
-    ];
-});
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ */
+class CategoryFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition()
+    {
+        return [
+            'title' => $this->faker->sentence,
+            'slug'  => $this->faker->unique()->slug(),
+        ];
+    }
+}
