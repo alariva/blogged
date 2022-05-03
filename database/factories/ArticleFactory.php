@@ -33,7 +33,7 @@ class ArticleFactory extends Factory
             'featured'     => false,
             'author_id'    => 1,
             'category_id'  => function() {
-                return factory(Category::class)->create()->id;
+                return Category::factory()->create()->id;
             },
         ];
     }

@@ -9,12 +9,14 @@ use BinaryTorch\Blogged\Filters\Filterable;
 use BinaryTorch\Blogged\Traits\Authorizable;
 use BinaryTorch\Blogged\Contracts\BloggedUser;
 use BinaryTorch\Blogged\Traits\HasMarkdownParser;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Article extends Model
 {
     use Filterable, 
         Authorizable,
-        HasMarkdownParser;
+        HasMarkdownParser,
+        HasFactory;
 
     /**
      * @var array

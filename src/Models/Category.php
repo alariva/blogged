@@ -2,13 +2,15 @@
 
 namespace BinaryTorch\Blogged\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use BinaryTorch\Blogged\Traits\Authorizable;
 
 class Category extends Model
 {
-    use Authorizable;
+    use Authorizable,
+        HasFactory;
     
     /**
      * @var array
